@@ -11,5 +11,12 @@
         2.Исследовать Django - фреймворк для web-приложений на Python.<br />
         3.Самостоятельно создать web-сайт c подробным описанием процесса.<br />
         4.Оценить возможности языка для быстрой разработки небольших приложений, решающих      поставленные задачи.</p>
+    {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
     </body>
 </html>
